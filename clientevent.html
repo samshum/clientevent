@@ -1,0 +1,49 @@
+<html>
+<head>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body div{
+			width: 100%; 
+			padding-top: 100px; 
+			margin 100px auto;
+			text-align:  center;
+		}
+		body div button{
+			position: initial;
+			left: 30%;
+			font-size: 50px;
+			width: 250px; 
+			height: 500px
+		}
+		#reset{
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<button id="addone">0</button>
+		<button id="addtwo">0</button>
+		<button id="reset"></button>
+	</div>
+	<script type='text/javascript'>
+		$(function($) {
+			var id = $('#addone');
+			var it = $('#addtwo');
+			var rs = $('#reset');
+			id.click(function(){
+				id.text(parseInt(id.text()) + 1)
+			})
+			it.click(function(){
+				it.text(parseInt(it.text()) + 1)
+			})
+			rs.click(function(){
+				id.text(0)
+				it.text(0)
+			});
+			rs.addClass('fa-refresh')
+		});
+	</script>
+</body>
+</html>
